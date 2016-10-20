@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="noM-ZD-MqX">
+                                <rect key="frame" x="20" y="120" width="560" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Hwl-H3-Em3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T1G-JI-Qfh"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-Dr-sWM">
+                                <rect key="frame" x="215" y="40" width="184" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Am1-EX-MBt"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkZ-am-5aN">
+                                <rect key="frame" x="409" y="40" width="185" height="50"/>
+                                <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJH-bq-YqZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KC5-LL-orl">
+                                <rect key="frame" x="20" y="40" width="185" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="81e-Bx-afl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GrR-Kg-QIw"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KC5-LL-orl" firstAttribute="leading" secondItem="noM-ZD-MqX" secondAttribute="trailing" constant="-328" id="3JL-2l-jKZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KC5-LL-orl" secondAttribute="trailing" constant="250" id="3wq-hh-mGZ"/>
+                            <constraint firstItem="WkZ-am-5aN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5qg-fc-XvA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WkZ-am-5aN" secondAttribute="trailing" constant="-14" id="Cmq-Kr-gvm"/>
+                            <constraint firstItem="noM-ZD-MqX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EBr-Ia-sXH"/>
+                            <constraint firstItem="WkZ-am-5aN" firstAttribute="leading" secondItem="yhe-Dr-sWM" secondAttribute="trailing" constant="10" id="L5b-KP-Xxe"/>
+                            <constraint firstItem="noM-ZD-MqX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="McY-Uz-Epz"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="top" secondItem="WkZ-am-5aN" secondAttribute="bottom" constant="-18" id="MlP-Jk-Phq"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="top" secondItem="KC5-LL-orl" secondAttribute="bottom" constant="-30" id="T6Y-ZG-fgy"/>
+                            <constraint firstItem="KC5-LL-orl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VoM-6E-ZCU"/>
+                            <constraint firstItem="noM-ZD-MqX" firstAttribute="top" secondItem="KC5-LL-orl" secondAttribute="bottom" constant="30" id="Wgc-z7-TIR"/>
+                            <constraint firstItem="noM-ZD-MqX" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ZMX-sz-60v"/>
+                            <constraint firstItem="WkZ-am-5aN" firstAttribute="centerY" secondItem="yhe-Dr-sWM" secondAttribute="centerY" id="dRS-xg-gl5"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="centerY" secondItem="KC5-LL-orl" secondAttribute="centerY" id="dzn-Rc-b4a"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="leading" secondItem="KC5-LL-orl" secondAttribute="trailing" constant="50" id="ecE-XT-6t1"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="width" secondItem="KC5-LL-orl" secondAttribute="width" id="nLH-EP-Yjp"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="leading" secondItem="KC5-LL-orl" secondAttribute="trailing" constant="10" id="pkq-SA-fZX"/>
+                            <constraint firstItem="KC5-LL-orl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="q5k-Qg-CAh"/>
+                            <constraint firstItem="yhe-Dr-sWM" firstAttribute="height" secondItem="KC5-LL-orl" secondAttribute="height" id="vns-s8-gXP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3JL-2l-jKZ"/>
+                                <exclude reference="3wq-hh-mGZ"/>
+                                <exclude reference="MlP-Jk-Phq"/>
+                                <exclude reference="T6Y-ZG-fgy"/>
+                                <exclude reference="ecE-XT-6t1"/>
+                                <exclude reference="5qg-fc-XvA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="limitField" destination="yhe-Dr-sWM" id="Jqs-RV-OMw"/>
+                        <outlet property="myTableView" destination="noM-ZD-MqX" id="aiY-FN-wi6"/>
+                        <outlet property="numberfield" destination="KC5-LL-orl" id="LM5-QS-ht5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="343"/>
+        </scene>
+    </scenes>
+</document>
